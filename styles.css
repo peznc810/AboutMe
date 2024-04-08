@@ -1,0 +1,92 @@
+/** @format */
+
+* {
+	scrollbar-width: none;
+}
+
+#home {
+	background-image: url(https://cdn.pixabay.com/photo/2016/11/29/03/59/dark-1867202_1280.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+	& h1 {
+		animation: name-reveal 0.5s ease forwards;
+		animation-delay: 0.5s;
+		& span {
+			animation: reveal 1s ease-in-out forwards;
+		}
+	}
+
+	& h2 {
+		animation: title-reveal 0.5s ease forwards;
+		animation-delay: 1.5s;
+		& span {
+			animation: reveal 1s ease-in-out forwards;
+			animation-delay: 1s;
+		}
+	}
+}
+
+#portfolio  a:hover {
+	& span {
+		
+		animation: bottom-line 1s ease forwards;
+	}
+}
+
+@keyframes reveal {
+	0% {
+		width: 0;
+		left: 0;
+	}
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+
+@keyframes title-reveal {
+	to {
+		color: #fff;
+	}
+}
+
+@keyframes name-reveal {
+	to {
+		color: #f8b035;
+	}
+}
+
+@keyframes rotate-icon {
+	from {
+		height: 100vh;
+		font-size: calc(10vw + 1rem);
+	}
+	to {
+		height: 10vh;
+		font-size: 1rem;
+	}
+}
+
+@keyframes bottom-line {
+	0%{
+		opacity: 0;
+		width: 0;
+		left: -10%;
+	}
+	/* 50%{
+		opacity: 0;
+		width: 32px;
+		left: -50%;
+	} */
+	100% {
+		opacity: 1;
+		width: 64px;
+		left: 0%;
+	}
+}
