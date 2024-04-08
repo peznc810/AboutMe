@@ -16,6 +16,8 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css">
+  <!-- animate css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <!-- gsap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
@@ -52,7 +54,7 @@
   </header>
   <main>
     <section id="home" class="w-svw text-white">
-      <div class="bg-gradient-to-tr from-primary py-20">
+      <div class="bg-gradient-to-tr from-primary py-40">
         <div class="container mx-auto h-full pt-20">
           <div class="grid md:grid-cols-2 place-content-center h-full">
             <div class="ml-auto">
@@ -71,12 +73,12 @@
                   <span class="bg-secondary"></span>
                 </p>
                 <ul class="flex gap-4">
-                  <li class="gsap-icon">
+                  <li class="home-icon">
                     <a href="https://github.com/peznc810">
                       <i class="fa-brands fa-github fa-2xl"></i>
                     </a>
                   </li>
-                  <li class="gsap-icon">
+                  <li class="home-icon">
                     <a href="https://www.linkedin.com/in/rubychen810/">
                       <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
@@ -89,12 +91,12 @@
         </div>
       </div>
     </section>
-    <section id="about" class="w-svw py-10">
+    <section id="about" class="w-svw py-20">
       <div class="container h-full">
         <div class="grid place-content-center gap-y-10 h-full">
-          <div class="text-white rounded-full bg-secondary w-16 h-16 mx-auto">
+          <div class="text-white rounded-full bg-secondary w-16 h-16 mx-auto invisible animate__animated">
             <div class="grid place-content-center h-full">
-              <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512">
+              <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512">
                 <path fill="#ffff"
                   d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" />
               </svg>
@@ -116,18 +118,18 @@
       <div class="container h-full">
         <div class="grid place-content-center gap-y-20 h-full">
           <h3
-            class="skill-title text-3xl font-medium text-center mt-6 opacity-0 translate-y-[-100%] after:h-1 after:w-20 after:absolute after:-bottom-4 after:left-0 after:right-0 after:mx-auto after:bg-secondary relative w-fit mx-auto">
+            class="text-3xl font-medium text-center mt-6 after:h-1 after:w-20 after:absolute after:-bottom-4 after:left-0 after:right-0 after:mx-auto after:bg-secondary relative w-fit mx-auto invisible animate__animated">
             專業技能</h3>
-          <div class="grid md:grid-cols-4 grid-cols-2 gap-x-10">
-            <div class="grid grid-rows-2 gap-2">
+          <ul class="grid md:grid-cols-4 grid-cols-2 gap-x-10">
+            <li class="grid grid-rows-2 gap-2 invisible animate__animated">
               <div class="rounded-full w-16 h-16 bg-secondary mx-auto">
                 <div class="grid place-content-center h-full">
                   <i class="fa-brands fa-js fa-2xl"></i>
                 </div>
               </div>
               <span class="text-center ">JavaScript</span>
-            </div>
-            <div class="grid grid-rows-2 gap-2">
+            </li>
+            <li class="grid grid-rows-2 gap-2 invisible animate__animated">
               <div class="rounded-full w-16 h-16 bg-secondary mx-auto">
                 <div class="grid place-content-center h-full">
                   <svg preserveAspectRatio="xMidYMid" viewBox="0 0 256 256" width="28"
@@ -145,16 +147,16 @@
                 </div>
               </div>
               <span class="text-center">TypeScript</span>
-            </div>
-            <div class="grid grid-rows-2 gap-2">
+            </li>
+            <li class="grid grid-rows-2 gap-2 invisible animate__animated">
               <div class="rounded-full w-16 h-16 bg-secondary mx-auto">
                 <div class="grid place-content-center h-full">
                   <i class="fa-brands fa-vuejs fa-2xl"></i>
                 </div>
               </div>
               <span class="text-center">Vue</span>
-            </div>
-            <div class="grid grid-rows-2 gap-2">
+            </li>
+            <li class="grid grid-rows-2 gap-2 invisible animate__animated">
               <div class="rounded-full w-16 h-16 bg-secondary mx-auto">
                 <div class="grid place-content-center h-full">
                   <svg preserveAspectRatio="xMidYMid" viewBox="0 0 256 154" width="28"
@@ -166,24 +168,24 @@
                 </div>
               </div>
               <span class="text-center">Tailwind</span>
-            </div>
-            <div class="grid grid-rows-2 gap-2">
+            </li>
+            <li class="grid grid-rows-2 gap-2 invisible animate__animated">
               <div class="rounded-full w-16 h-16 bg-secondary mx-auto">
                 <div class="grid place-content-center h-full">
                   <i class="fa-brands fa-bootstrap fa-2xl"></i>
                 </div>
               </div>
               <span class="text-center">Bootstrap</span>
-            </div>
-            <div class="grid grid-rows-2 gap-2">
+            </li>
+            <li class="grid grid-rows-2 gap-2 invisible animate__animated">
               <div class="rounded-full w-16 h-16 bg-secondary mx-auto">
                 <div class="grid place-content-center h-full">
                   <i class="fa-brands fa-node-js fa-2xl"></i>
                 </div>
               </div>
               <span class="text-center">Node.js</span>
-            </div>
-            <div class="grid grid-rows-2 gap-2">
+            </li>
+            <li class="grid grid-rows-2 gap-2 invisible animate__animated">
               <div class="rounded-full w-16 h-16 bg-secondary mx-auto">
                 <div class="grid place-content-center h-full">
                   <svg viewBox="0 0 32 32" width="36" xmlns="http://www.w3.org/2000/svg">
@@ -199,30 +201,30 @@
                 </div>
               </div>
               <span class="text-center">MySQL</span>
-            </div>
-            <div class="grid grid-rows-2 gap-2">
+            </li>
+            <li class="grid grid-rows-2 gap-2 invisible animate__animated">
               <div class="rounded-full w-16 h-16 bg-secondary mx-auto">
                 <div class="grid place-content-center h-full">
                   <i class="fa-brands fa-git-alt fa-2xl"></i>
                 </div>
               </div>
               <span class="text-center">Git</span>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
     <section id="portfolio" class="w-svw py-10">
       <div class="grid place-content-center gap-y-20 h-full">
         <h3
-          class="portfolio-title text-3xl font-medium text-center mt-6 opacity-0 translate-y-[-100%] after:h-1 after:w-20 after:absolute after:-bottom-4 after:left-0 after:right-0 after:mx-auto after:bg-secondary relative w-fit mx-auto">
+          class="text-3xl font-medium text-center mt-6 after:h-1 after:w-20 after:absolute after:-bottom-4 after:left-0 after:right-0 after:mx-auto after:bg-secondary relative w-fit mx-auto invisible animate__animated">
           作品集</h3>
-        <div class="grid md:grid-cols-2 md:gap-x-6 gap-y-4">
-          <div class="aspect-video w-full max-w-lg mx-auto">
+        <article class="grid md:grid-cols-2 md:gap-x-6 gap-y-4">
+          <figure class="w-full max-w-lg mx-auto place-self-center invisible animate__animated">
             <img src="/images/Screen-home.gif" alt="">
-          </div>
-          <div class="container-md">
-            <h4 class="text-2xl font-medium mb-4">DiVING</h4>
+          </figure>
+          <div class="container invisible animate__animated">
+            <h4 class="text-3xl font-medium mb-4">DiVING</h4>
             <div class="flex flex-wrap gap-2 mb-4">
               <div class="rounded-full px-2 border-2 border-secondary">Next.js</div>
               <div class="rounded-full px-2 border-2 border-secondary">React</div>
@@ -242,7 +244,7 @@
               </a>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
   </main>
@@ -283,36 +285,34 @@
     $('.scroll').each(function () {
       const sectionOffset = $(this.hash).offset().top - 40
       const currentOffset = $(window).scrollTop()
-      console.log(currentOffset);
+      const aboutOffset = $('#about').offset().top - 500
+      const skillOffset = $('#skill').offset().top - 500
+      const portfolioOffset = $('#portfolio').offset().top - 500
+      console.log(currentOffset, aboutOffset, skillOffset, portfolioOffset);
+
+
       if (currentOffset >= sectionOffset) {
         $(this).parent().addClass('text-secondary')
         $(this).parent().siblings().removeClass('text-secondary')
       }
 
-      if (currentOffset >= 200) {
-        gsap.to('.about-icon', {
-          rotation: 360,
-          duration: 2,
-          ease: 'power1.out',
-        })
+      if (currentOffset >= aboutOffset) {
+        $('#about .animate__animated').removeClass('invisible').addClass('animate__rotateIn')
       }
 
-      if (currentOffset >= 800) {
-        gsap.to('.skill-title', {
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          ease: 'power1.in',
-        })
+      if (currentOffset >= skillOffset) {
+        $('#skill h3').removeClass('invisible').addClass('animate__bounceInDown')
+        $("#skill li").each(function (index) {
+          //讓所有 visible delay 200秒 刪除class 切換  fadeInUp
+          $(this).delay(index * 200).queue(function () {
+            $(this).removeClass("invisible").addClass("animate__fadeIn");
+          });
+        });
       }
 
-      if (currentOffset >= 1200) {
-        gsap.to('.portfolio-title', {
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          ease: 'power1.in',
-        })
+      if (currentOffset >= portfolioOffset) {
+        $('#portfolio h3').removeClass('invisible').addClass('animate__bounceInDown')
+        $('#portfolio article figure, #portfolio article > div').removeClass('invisible').addClass('animate__fadeInDown')
       }
     })
   })
@@ -332,7 +332,7 @@
     ease: 'bounce.out',
   })
 
-  gsap.from('.gsap-icon', {
+  gsap.from('.home-icon', {
     opacity: 0,
     y: 25,
     duration: 1,
@@ -340,6 +340,7 @@
     ease: 'power1.inOut',
     stagger: 0.5,
   })
+
 </script>
 
 </html>

@@ -28,9 +28,8 @@
 	}
 }
 
-#portfolio  a:hover {
+#portfolio a:hover {
 	& span {
-		
 		animation: bottom-line 1s ease forwards;
 	}
 }
