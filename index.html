@@ -244,37 +244,40 @@
           </div>
         </div>
       </section>
-      <section id="portfolio" class="w-svw md:h-svh py-20">
-        <div class="grid place-content-center gap-y-20 h-full">
+      <section id="portfolio" class="w-svw md:py-20 py-10">
+        <div class="flex flex-col space-y-20">
           <h3
-            class="text-3xl font-medium text-center mt-6 after:h-1 after:w-20 after:absolute after:-bottom-4 after:left-0 after:right-0 after:mx-auto after:bg-secondary relative w-fit mx-auto invisible animate__animated">
-            作品集</h3>
-          <article class="grid md:grid-cols-2 md:gap-x-6 gap-y-4">
-            <figure class="w-full max-w-lg mx-auto place-self-center invisible animate__animated">
-              <img src="images/Screen-home.gif" alt="">
-            </figure>
-            <div class="container invisible animate__animated">
-              <h4 class="text-3xl font-medium mb-4">DiVING</h4>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <div class="rounded-full px-2 border-2 border-secondary">Next.js</div>
-                <div class="rounded-full px-2 border-2 border-secondary">React</div>
-                <div class="rounded-full px-2 border-2 border-secondary">Bootstrap</div>
-                <div class="rounded-full px-2 border-2 border-secondary">Node.js</div>
-                <div class="rounded-full px-2 border-2 border-secondary">MySQL</div>
-                <div class="rounded-full px-2 border-2 border-secondary">SCSS</div>
+            class="text-3xl font-medium text-center after:h-1 after:w-20 after:absolute after:-bottom-4 after:left-0 after:right-0 after:mx-auto after:bg-secondary relative w-fit mx-auto invisible animate__animated">
+            作品集
+          </h3>
+          <div class="flex justify-center">
+            <article class="grid md:grid-cols-2 md:gap-x-6 gap-y-4 px-10">
+              <figure class="w-full max-w-lg mx-auto place-self-center invisible animate__animated">
+                <img src="images/Screen-home.gif" alt="">
+              </figure>
+              <div class="container invisible animate__animated">
+                <h4 class="text-3xl font-medium mb-4">DiVING</h4>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <div class="rounded-full px-2 border-2 border-secondary">Next.js</div>
+                  <div class="rounded-full px-2 border-2 border-secondary">React</div>
+                  <div class="rounded-full px-2 border-2 border-secondary">Bootstrap</div>
+                  <div class="rounded-full px-2 border-2 border-secondary">Node.js</div>
+                  <div class="rounded-full px-2 border-2 border-secondary">MySQL</div>
+                  <div class="rounded-full px-2 border-2 border-secondary">SCSS</div>
+                </div>
+                <p class="md:max-w-[40ch] leading-relaxed mb-2">
+                  使用Next進行全端開發的購物網站，網站中豐富的生態能夠提供使用者全方位購物的體驗。在這個專案中，我主要負責會員系統設計，串接 Firebase 實現 Google 登入，並使用 JWT
+                  進行身份驗證以提供安全的登入方式。另外在Server端設置CORS，以確保系統僅接受安全來源的請求，從而實現安全的跨域資源共用。
+                </p>
+                <div class="project-link w-full">
+                  <a href="https://github.com/peznc810/DiVING-React" class="text-secondary py-2 relative">
+                    前往專案
+                    <span class="block border-b-2 border-secondary absolute"></span>
+                  </a>
+                </div>
               </div>
-              <p class="md:max-w-[40ch] leading-relaxed mb-2">
-                使用Next進行全端開發的購物網站，網站中豐富的生態能夠提供使用者全方位購物的體驗。在這個專案中，我主要負責會員系統設計，串接 Firebase 實現 Google 登入，並使用 JWT
-                進行身份驗證以提供安全的登入方式。另外在Server端設置CORS，以確保系統僅接受安全來源的請求，從而實現安全的跨域資源共用。
-              </p>
-              <div class="project-link w-full">
-                <a href="https://github.com/peznc810/DiVING-React" class="text-secondary py-2 relative">
-                  前往專案
-                  <span class="block border-b-2 border-secondary absolute"></span>
-                </a>
-              </div>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </section>
     </main>
