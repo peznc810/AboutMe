@@ -42,41 +42,41 @@
                 class="before:absolute before:inset-x-0 before:left-0 before:top-1/4 before:mx-auto before:h-[2px] before:w-6 before:bg-white before:shadow-[0px_10px_0px_rgba(255,255,255,1)]">
               </div>
             </button>
-          </div>
-          <div class="absolute top-0 left-0 bg-primary w-full pb-10 pt-16 invisible animate__animated sideNav">
-            <button type="button" class="absolute top-8 right-14 w-10 h-10 group">
-              <span
-                class="before:absolute before:inset-x-0 before:left-0 before:top-1/4 before:mx-auto before:h-[2px] before:w-6 before:bg-white before:rotate-45 after:absolute after:inset-x-0 after:left-0 after:top-1/4 after:mx-auto after:h-[2px] after:w-6 after:bg-white after:-rotate-45 group-hover:before:bg-secondary group-hover:after:bg-secondary"></span>
-            </button>
-            <ul class="flex flex-col text-white h-full space-y-5">
-              <li class="text-center hover:text-secondary">
+            <div class="absolute top-0 left-0 bg-primary w-full pb-10 pt-16 invisible animate__animated sideNav">
+              <button type="button" class="absolute top-8 right-14 w-10 h-10 group">
+                <span
+                  class="before:absolute before:inset-x-0 before:left-0 before:top-1/4 before:mx-auto before:h-[2px] before:w-6 before:bg-white before:rotate-45 after:absolute after:inset-x-0 after:left-0 after:top-1/4 after:mx-auto after:h-[2px] after:w-6 after:bg-white after:-rotate-45 group-hover:before:bg-secondary group-hover:after:bg-secondary"></span>
+              </button>
+              <ul class="flex flex-col text-white h-full space-y-5">
+                <li class="text-center hover:text-secondary">
+                  <a href="#home" class="tab p-4 scroll">首頁</a>
+                </li>
+                <li class="text-center hover:text-secondary">
+                  <a href="#about" class="tab p-4 scroll">關於我</a>
+                </li>
+                <li class="text-center hover:text-secondary">
+                  <a href="#skill" class="tab p-4 scroll">專業技能</a>
+                </li>
+                <li class="text-center hover:text-secondary">
+                  <a href="#portfolio" class="tab p-4 scroll">作品集</a>
+                </li>
+              </ul>
+            </div>
+            <ul class="md:flex text-white hidden">
+              <li class=" hover:text-secondary">
                 <a href="#home" class="tab p-4 scroll">首頁</a>
               </li>
-              <li class="text-center hover:text-secondary">
+              <li class=" hover:text-secondary">
                 <a href="#about" class="tab p-4 scroll">關於我</a>
               </li>
-              <li class="text-center hover:text-secondary">
+              <li class=" hover:text-secondary">
                 <a href="#skill" class="tab p-4 scroll">專業技能</a>
               </li>
-              <li class="text-center hover:text-secondary">
+              <li class=" hover:text-secondary">
                 <a href="#portfolio" class="tab p-4 scroll">作品集</a>
               </li>
             </ul>
           </div>
-          <ul class="md:flex text-white hidden">
-            <li class=" hover:text-secondary">
-              <a href="#home" class="tab p-4 scroll">首頁</a>
-            </li>
-            <li class=" hover:text-secondary">
-              <a href="#about" class="tab p-4 scroll">關於我</a>
-            </li>
-            <li class=" hover:text-secondary">
-              <a href="#skill" class="tab p-4 scroll">專業技能</a>
-            </li>
-            <li class=" hover:text-secondary">
-              <a href="#portfolio" class="tab p-4 scroll">作品集</a>
-            </li>
-          </ul>
         </div>
       </nav>
     </header>
@@ -314,11 +314,9 @@
     $('.scroll').each(function () {
       const sectionOffset = $(this.hash).offset().top - 40
       const currentOffset = $(window).scrollTop()
-      const aboutOffset = $('#about').offset().top - 500
-      const skillOffset = $('#skill').offset().top - 500
-      const portfolioOffset = $('#portfolio').offset().top - 500
-      console.log(currentOffset, aboutOffset, skillOffset, portfolioOffset);
-
+      const aboutOffset = $('#about').offset().top - 300
+      const skillOffset = $('#skill').offset().top - 300
+      const portfolioOffset = $('#portfolio').offset().top - 300
 
       if (currentOffset >= sectionOffset) {
         $(this).parent().addClass('text-secondary')
@@ -345,8 +343,21 @@
     })
   })
 
-  $('header button').eq(0).on('click', function () {
+  $('header button').eq(0).on('click', function (e) {
     $('.sideNav').removeClass('invisible').addClass('animate__fadeInDown')
+    e.stopPropagation()
+
+    $(document).on('click', function (e) {
+      const clickTarget = $(e.target)
+      const isSideNav = !$('.sideNav').is(clickTarget) && $('.sideNav').has(clickTarget).length === 0
+
+      if (isSideNav) {
+        $('.sideNav').removeClass('animate__fadeInDown').addClass('animate__fadeOutUp')
+        setTimeout(function () {
+          $('.sideNav').removeClass('animate__fadeOutUp').addClass('invisible');
+        }, 1000);
+      }
+    })
   })
 
   $('header button').eq(1).on('click', function () {
@@ -361,7 +372,7 @@
     opacity: 0,
     duration: 1,
     ease: 'power1.inOut',
-    stagger: 0.5,
+    stagger: 0.3,
   })
 
   gsap.from('.gsap-detail', {
